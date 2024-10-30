@@ -38,6 +38,7 @@ test/test*/**
 scullion.json
 jsconfig.json
 .scannerwork
+package-lock.json
 
 # Composer objects
 
