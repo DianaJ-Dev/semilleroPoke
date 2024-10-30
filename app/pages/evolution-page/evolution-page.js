@@ -1,8 +1,10 @@
-import { CellsPage } from '@cells/cells-page';
-import { html } from 'lit-element';
+import { CellsPageMixin as cellsPage } from '@cells/cells-page-mixin';
+import { html, LitElement } from 'lit-element';
+import { BbvaCoreIntlMixin as intl } from '@bbva-web-components/bbva-core-intl-mixin';
+
 import '@semillero/evolution-pokemones/evolution-pokemones.js';
 
-class EvolutionPage extends CellsPage {
+class EvolutionPage extends intl(cellsPage(LitElement)) {
   static get is() {
     return 'evolution-page';
   }
@@ -22,10 +24,10 @@ class EvolutionPage extends CellsPage {
 
 
   onPageEnter() {
-    const urlParams = new URLSearchParams(window.location.hash.split('?')[1]);
-    this.pokemonId = urlParams.get('pokemonId');
-    console.log('pokemonId en onPageEnter:', this.pokemonId);
+    this.pokemonId = parseInt(this.params.id);
+    console.log('urlParams', this.pokemonId);
   }
+
 
   get headerId() {
     const customerId = this.params['pokemon-id'];
