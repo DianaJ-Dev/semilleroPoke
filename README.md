@@ -1,85 +1,56 @@
-# What's this project about?
+# 🌟 Pokémon Evolution App
 
-This project aims to be an example application showing the Platform capabilities, as well as a starting project/boilerplate for your project, and a quick guide about how to build applications with Cells Platform.
+## Descripción
 
-## What has it got?
+**Pokémon Evolution App** es una aplicación interactiva diseñada para los amantes de Pokémon. Con esta aplicación, puedes explorar una lista de Pokémon y ver sus evoluciones de forma visual y atractiva. La aplicación utiliza el componente **@semillero/all-pokemon/all-pokemon.js** para obtener los datos de Pokémon desde [PokeAPI](https://pokeapi.co/), y al hacer clic en un Pokémon, muestra sus evoluciones mediante el componente **@semillero/evolution-pokemones/evolution-pokemones.js**. 
 
-- It showcases a functional sample application built with [LitElement](https://lit.dev/)  and declarative pages, using our latest stack (Cells Cli 4.0 & Cells Bridge), and it does cover: [application i18n](https://platform.bbva.com/en-us/developers/engines/cells/documentation/basic-features/components/components-in-depth/internationalization#content0), [data publication/subscription between pages](https://platform.bbva.com/en-us/developers/engines/cells/documentation/basic-features/application-state-management/channels), [routing](https://platform.bbva.com/en-us/developers/engines/cells/documentation/basic-features/routing/routes), data managers (mimic a real service!), and much more!
+---
 
-- Built entirely with components from [Cells Catalog](https://au-bbva-andromeda.appspot.com/api/projects/au-bbva-cells-platform/segments/au-bbva-cells-artefacts/resources/cells/apps/bbva_gl_catalog/cells-catalog/master/cellsapp/pr/vulcanize/index.html#!/) - BBVA Experience & Cells Architecture.
+## ✨ Características
 
-- If the application was created with the e2e option it will have a scaffold for testing e2e with Cells Pepino V2 ([WebdriverIO 6.0](https://v6.webdriver.io/)) and [Global QE Testing Framework](https://globaldevtools.bbva.com/bitbucket/projects/BGT/repos/e2e-js-framework/browse), that will serve as a starting point for your requirements and custom use cases.
+- **Lista completa de Pokémon**: Accede a un listado de todos los Pokémon con su respectivo nombre.
+- **Evoluciones interactivas**: Haz clic en cualquier Pokémon y descubre sus evoluciones.
+- **Navegación intuitiva**: Usa el método `navigate` para moverte entre diferentes vistas de la aplicación.
 
-To go deeper, please check our [Platform Documentation](https://platform.bbva.com/en-us/developers/engines/cells/documentation/getting-started/what-is-cells).
+---
 
-# CELLS (**cells-cli**)
+## 📋 Requisitos
 
-**cells-cli** is the command line tool that provides you with common tasks and commands for working in a cells project.
+Asegúrate de tener instalados los siguientes elementos antes de comenzar:
 
-## Installation
+- [Node.js](https://nodejs.org/)
+- [Cells CLI](https://cells.com/) (para ejecutar la aplicación)
 
-To install the application just run:
+---
 
-~~~sh
-npm -g install @cells/cells-cli
-~~~
+## 🚀 Instalación
 
-Once installed, `cells` command will be available to you.
+Sigue estos pasos para configurar y ejecutar **Pokémon Evolution App** en tu entorno local.
 
-## Usage
-
-* Starting the application in dev mode
-
-~~~
-$ cells app:serve -c dev.js
-~~~
-
-* Starting the application in production mode
-
-~~~
-$ cells app:serve -c dev.js -b
-~~~
-
-
-## <a name="e2e"></a>Testing e2e
-
-If you want to run e2e tests with [Cells Pepino V2](https://platform.bbva.com/en-us/developers/engines/cells/documentation/testing/cells-pepino-v2), you must install it. Go to folder `test/e2e`, install dependencies and then, execute it from the root of your e2e project.
-
-#### Installation (inside your e2e test project)
-
-```shell
-yarn
+### 1. Clona el repositorio
+Abre una terminal y ejecuta:
+```bash
+git clone https://github.com/DianaJ-Dev/semilleroPoke.git
 ```
+### 2. Instala las dependencias:
 
-#### Execution (from the root of your e2e project)
+~~~
+npm install
+~~~
 
-```shell
-./node_modules/@cells-pepino/cli/bin/cli.js -c ./config/wdio5.local.conf.js
-```
+### 3. Instala Cells CLI globalmente si no lo tienes instalado:
 
-or simply, through provided npm script in e2e scaffold project:
+~~~
+npm install -g cells-cli
+~~~
 
-```shell
-npm run test
-```
+### 4. Ejecuta la aplicación:
 
-Follow given documentation, and e2e project README.md file for more information about how to do it (the file is located in the folder `test/e2e`).
+~~~
+cells app:serve -c dev.js
+~~~
 
-__If you are going to run your e2e tests against a local application (you are hosting it in your local workspace), remember to serve it first__ - otherwise e2e test runner won't be able to run the tests against it - See more information about `cells app:serve` command above.
+## 🎨 IPersonalización de Estilos:
 
-__REMEMBER! You must install all required npm dependencies first inside your E2E project__
+Puedes ajustar los estilos para que se adapten a tu diseño personalizado. Modifica los archivos CSS y asegúrate de vincularlos en tu proyecto para darle un toque único.
 
-```shell
-yarn
-```
-
-Parameters:
-
-- **url**: url for testing. Required
-- **config_file**: javascript configuration file. This configuration must exists in the path `./app/config/{environment}.js`. Required.
-
-**WARNING:**
-
-To run the test yo must move on a e2e folder project. You can create it answer `Y' to the question
-`Do you want an E2E project to be created? (Y/n)` in the creation app process.
-See `cells app:create --help`.

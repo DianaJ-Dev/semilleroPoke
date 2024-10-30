@@ -23,7 +23,6 @@ class HomePage extends BbvaCoreIntlMixin(CellsPage) {
     return html`
       <cells-template-paper-drawer-panel mode="seamed" id="paperHeaderPanel" disable-swipe>
         <div slot="app_main">
-          <h1>${this.title1}</h1>
           <all-pokemon></all-pokemon>
         </div>
       </cells-template-paper-drawer-panel>
