@@ -12,7 +12,7 @@ class EvolutionPage extends intl(cellsPage(LitElement)) {
   static get properties() {
     return {
       pokemonId: { type: Number },
-      params: {type: Object}
+      params: { type: Object }
     };
   }
 
@@ -22,16 +22,8 @@ class EvolutionPage extends intl(cellsPage(LitElement)) {
     this.params = {};
   }
 
-
   onPageEnter() {
     this.pokemonId = parseInt(this.params.id);
-    console.log('urlParams', this.pokemonId);
-  }
-
-
-  get headerId() {
-    const customerId = this.params['pokemon-id'];
-    return decodeURI(customerId);
   }
 
   render() {

@@ -1,7 +1,10 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  
 }
 
 [id^='cells-template-'] {
